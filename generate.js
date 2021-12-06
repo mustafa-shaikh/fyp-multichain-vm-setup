@@ -142,14 +142,14 @@ const randomcode = () => {
       Math.random() * (2)
     )
   };
-for (var j =0; j< 5 ; j++) {
+for (var j =0; j< 50 ; j++) {
     for (i in symptoms){
         newSymptoms[i] = randomcode()
     }
     array.push(newSymptoms);
 }
 const jsonString = JSON.stringify(array)
-fs.writeFile('./collection1.json', jsonString, err => {
+fs.writeFile('./collection.json', jsonString, err => {
     if (err) {
         console.log('Error writing file', err)
     } else {

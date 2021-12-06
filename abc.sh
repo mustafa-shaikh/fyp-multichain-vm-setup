@@ -10,13 +10,9 @@ cd FYP
  
 #installing necessary packages
 sudo apt install git
-sudo apt install php
-sudo apt install php-curl
-sudo apt install net-tools
 sudo apt install nodejs
 sudo apt install python3-pip
 sudo apt install jq
-sudo apt install maven
  
 #installing multichain
 wget https://www.multichain.com/download/multichain-2.1.2.tar.gz
@@ -25,10 +21,21 @@ cd multichain-2.1.2
 sudo mv multichaind multichain-cli multichain-util /usr/local/bin
  
 #installing multichain-web demo
+sudo apt install php
+sudo apt install php-curl
+sudo apt install net-tools
 cd ~/Downloads/FYP
 git clone https://github.com/MultiChain/multichain-web-demo.git
+
+#install for  multichain Node API
+sudo apt install nodejs
+sudo apt install npm
+git clone https://github.com/scoin/multichain-node.git
+cd multichain-node
+npm install
  
-#installing multichain Java API
+#install for  multichain Java API
+sudo apt install maven
 git clone https://github.com/SimplyUb/MultiChainJavaAPI.git
 cd MultiChainJavaAPI
 mvn clean install
